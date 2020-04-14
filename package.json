@@ -1,0 +1,28 @@
+{
+  "name": "ptimemanager-api",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emmanuelv02/PTimeManager.git"
+  },
+  "author": "Emmanuel Vidal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emmanuelv02/PTimeManager/issues"
+  },
+  "homepage": "https://github.com/emmanuelv02/PTimeManager#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1"
+  }
+}
