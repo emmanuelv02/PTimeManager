@@ -1,4 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
+const Sequelize = require('..');
 
 class UserAccount extends Model { }
 
@@ -18,7 +19,9 @@ UserAccount.init({
 }, {
   underscored: true,
   freezeTableName: true,
-  tableName: 'user_account'
+  tableName: 'user_account',
+  timestamps: false,
+  sequelize: Sequelize
 });
 
 module.exports = UserAccount;

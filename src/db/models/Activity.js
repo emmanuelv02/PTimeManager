@@ -1,5 +1,8 @@
 const { Model, DataTypes, Deferrable } = require('sequelize');
 const UserAccount = require('./UserAccount');
+const Tag = require('./Tag');
+
+const Sequelize = require('..');
 
 class Activity extends Model { }
 
@@ -23,7 +26,16 @@ Activity.init({
 }, {
   tableName: 'activity',
   freezeTableName: true,
-  underscored: true
+  underscored: true,
+  sequelize: Sequelize,
+  timestamps: false
+});
+
+Activity.belongsToMany(Tag, {
+  through: 'activity_tag',
+  foreignKey: 'activity_id',
+  otherKey: 'tag_id',
+  timestamps: false
 });
 
 module.exports = Activity;
